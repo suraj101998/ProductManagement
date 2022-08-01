@@ -1,0 +1,41 @@
+<p align="center">CATEGORY DETAILS</p>
+<div class="container">
+    <table class="table table-bordered  table-striped">
+       <tr align="center">
+        <th>CATEGORY ID</th>
+           <th>CATEGORY NAME</th>
+
+       </tr>
+
+       <tr *ngFor = "let cat of productCategories " align="center" >
+        <td> {{cat.categoryid}}</td>
+        <td> {{cat.categoryname}}</td>              
+    </tr>
+
+</table>
+</div>
+<p class="head" align="center">CATEGORY FORM</p>
+<div class="form-container">
+<form class="ngForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="col-sm-3"><label>CATEGORY ID</label></div>
+        <div class="col-sm-3"><input type="text" name="categoryid" [(ngModel)]="formModel.categoryid"></div>
+    </div>
+    &nbsp;             
+
+    <div class="row">
+        <div class="col-sm-3"><label>CATEGORY NAME</label></div>
+        <div class="col-sm-3"><input type="text" name="categoryname" [(ngModel)]="formModel.categoryname"></div>
+    </div>
+    &nbsp;
+
+    <div class="row">
+        <div class="col-sm-3"><input type="submit" name="submit" class="btn btn-lg btn-primary"></div>
+        <a class= " home" href="http://localhost:4200/">BACK TO HOME PAGE </a>
+    </div>
+
+</form>
+</div>
+<div align="center">
+    <p class="details">****************All Copyrights Reserved****************</p>
+</div>

@@ -1,0 +1,107 @@
+<p align="center">PRODUCT DETAILS</p>
+<div class="container">
+    <table class="table table-bordered  table-striped">
+       <tr align="center"> 
+        <th>PRODUCT ID</th>
+        <th>SKU</th>
+        <th>PRODUCT NAME</th>
+        <th>DESCRIPTION</th>
+        <th>UNIT PRICE</th>
+        <th>IMAGE URL</th>
+        <th>UNITS OF STOCK</th>
+        <th>DATE CREATED</th>
+        <th>LAST UPDATED</th>
+        <th>CATEGORY ID</th>
+       </tr>
+
+       <tr *ngFor = "let pro of products " align="center">
+           <td> {{pro.id}}</td>
+           <td> {{pro.sku}}</td>
+           <td> {{pro.name}}</td>
+           <td> {{pro.description}}</td>
+           <td> {{pro.unitprice | currency :'INR'}}</td>
+           <td> {{pro.imageurl}}</td>
+           <td> {{pro.unitsofstock}}</td>
+           <td> {{pro.datecreated}}</td>
+           <td> {{pro.lastupdated}}</td>
+           <td> {{pro.categoryid}}</td>
+                      
+       </tr>
+    </table>
+    </div>
+
+    
+<p class="head" align="center">PRODUCT FORM</p>
+<div class="form-container">
+    <form class="ngForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-sm-3"><label>PRODUCT ID</label></div>
+            <div class="col-sm-3"><input type="text" name="id" [(ngModel)]="formModel.id"></div>
+        </div>
+        &nbsp;
+
+        <div class="row">
+            <div class="col-sm-3"><label>SKU</label></div>
+            <div class="col-sm-3"><input type="text" name="sku" [(ngModel)]="formModel.sku"></div>
+        </div>
+        &nbsp;
+    
+        <div class="row">
+            <div class="col-sm-3"><label>PRODUCT NAME</label></div>
+            <div class="col-sm-3"><input type="text" name="name" [(ngModel)]="formModel.name" ></div>
+        </div>
+        &nbsp;
+     
+        <div class="row">
+            <div class="col-sm-3"><label>DESCRIPTION</label></div>
+            <div class="col-sm-3"><input type="text" name="description" [(ngModel)]="formModel.description"></div>
+        </div>
+        &nbsp;
+    
+        <div class="row">
+            <div class="col-sm-3"><label>UNIT PRICE</label></div>
+            <div class="col-sm-3"><input type="text" name="unitprice" [(ngModel)]="formModel.unitprice"></div>
+        </div>
+        &nbsp;
+    
+        <div class="row">
+            <div class="col-sm-3"><label>IMAGE URL</label></div>
+            <div class="col-sm-3"><input type="text" name="imageurl" [(ngModel)]="formModel.imageurl"></div>
+        </div>
+        &nbsp;
+    
+        <div class="row">
+            <div class="col-sm-3"><label>UNITS OF STOCK</label></div>
+            <div class="col-sm-3"><input type="text" name="unitsofstock" [(ngModel)]="formModel.unitsofstock"></div>
+        </div>
+        &nbsp;
+    
+        <div class="row">
+            <div class="col-sm-3"><label>Date CREATED</label></div>
+            <div class="col-sm-3"><input type="text" name="datecreated" [(ngModel)]="formModel.datecreated"></div>
+        </div>
+        &nbsp;
+
+        <div class="row">
+            <div class="col-sm-3"><label>LAST UPDATED</label></div>
+            <div class="col-sm-3"><input type="text" name="lastupdated" [(ngModel)]="formModel.lastupdated"></div>
+        </div>
+        &nbsp;
+    
+        <div class="row">
+            <div class="col-sm-3"><label>CATEGORY ID</label></div>
+            <div class="col-sm-3"><input type="text" name="categoryid" [(ngModel)]="formModel.categoryid"></div>
+        </div>
+        &nbsp;
+    
+        <div class="row">
+            <div class="col-sm-3 "><input type="submit" name="submit" class="btn btn-lg btn-primary"></div>
+            <a class= "home" href="http://localhost:4200/">BACK TO HOME PAGE </a>
+        </div>
+    
+    </form>
+</div>
+
+<div align="center">
+    <p class="details">****************All Copyrights Reserved****************</p>
+</div>
